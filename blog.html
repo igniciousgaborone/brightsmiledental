@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dental Blog | BrightSmile Dental Clinic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <span class="logo-text">Bright<span>Smile</span></span>
+      </a>
+      
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+		  <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+		  <li><a href="blog.html" class="active">Blog</a></li>
+		  <li><a href="contact.html#appointment" class="cta-btn">Book Appointment</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="blog-page">
+    <!-- Hero Banner -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Dental Health Blog</h1>
+        <p>Expert advice for your oral health</p>
+      </div>
+    </section>
+
+    <!-- Main blog layout with sidebar -->
+    <div class="container grid-container with-sidebar">
+      <article class="main-content">
+        <!-- Featured Post -->
+        <section class="featured-post">
+          <article>
+            <img src="images/blog/post1.jpg" alt="Brushing techniques" loading="lazy">
+            <div class="post-content">
+              <span class="post-category">Oral Hygiene</span>
+              <h2>Proper Brushing Techniques You Might Be Missing</h2>
+              <p class="post-meta">Posted on May 15, 2023 by Dr. Tshepo Molefi</p>
+              <p>Many people brush their teeth daily but might not be doing it effectively. Learn the dentist-recommended techniques to maximize your oral hygiene routine and prevent common problems like gum disease and enamel wear...</p>
+              <a href="post1.html" class="read-more">Read More</a>
+            </div>
+          </article>
+        </section>
+
+        <!-- Blog Grid -->
+        <section class="blog-grid">
+          <h2 class="section-title">Latest Articles</h2>
+          <div class="posts-container">
+            <article class="post-card">
+              <img src="images/blog/post2.jpg" alt="Dental implants" loading="lazy">
+              <div class="post-content">
+                <span class="post-category">Restorative Dentistry</span>
+                <h3>Dental Implants: What to Expect</h3>
+                <p class="post-meta">Posted on April 28, 2023 by Dr. Kagiso Williams</p>
+                <p>A complete guide to the dental implant process from consultation to final restoration...</p>
+                <a href="post2.html" class="read-more">Read More</a>
+              </div>
+            </article>
+
+            <article class="post-card">
+              <img src="images/blog/post3.jpg" alt="Child at dentist" loading="lazy">
+              <div class="post-content">
+                <span class="post-category">Pediatric Dentistry</span>
+                <h3>Preparing Your Child for Their First Dental Visit</h3>
+                <p class="post-meta">Posted on March 12, 2023 by Dr. Amantle Nkwe</p>
+                <p>Tips to make your child's first dental experience positive and anxiety-free...</p>
+                <a href="post3.html" class="read-more">Read More</a>
+              </div>
+            </article>
+			
+          </div>
+        </section>
+      </article>
+
+      <!-- Blog Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-widget">
+          <h3>Categories</h3>
+          <ul class="category-list">
+            <li><a href="#">Oral Hygiene</a></li>
+            <li><a href="#">Preventive Care</a></li>
+            <li><a href="#">Cosmetic Dentistry</a></li>
+            <li><a href="#">Restorative Dentistry</a></li>
+            <li><a href="#">Pediatric Dentistry</a></li>
+            <li><a href="#">Dental Technology</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3>Popular Tags</h3>
+          <div class="tag-cloud">
+            <a href="#">#whitening</a>
+            <a href="#">#braces</a>
+            <a href="#">#implants</a>
+            <a href="#">#gumhealth</a>
+            <a href="#">#prevention</a>
+            <a href="#">#children</a>
+          </div>
+        </div>
+
+        <div class="sidebar-widget newsletter">
+          <h3>Subscribe to Our Newsletter</h3>
+          <p>Get dental health tips and clinic updates</p>
+          <form action="#" method="POST">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit" class="cta-btn">Subscribe</button>
+          </form>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="logo">
+          <span class="logo-text">Bright<span>Smile</span></span>
+        </div>
+        <p>Providing exceptional dental care with a personal touch since 2010.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+		  <li><a href="products.html">Products</a></li>
+		  <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="services.html#cleaning">Teeth Cleaning</a></li>
+          <li><a href="services.html#whitening">Whitening</a></li>
+          <li><a href="services.html#implants">Implants</a></li>
+          <li><a href="services.html#orthodontics">Orthodontics</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <ul class="contact-info">
+          <li><i class="fas fa-map-marker-alt"></i> 123 Dental Ave, Gaborone</li>
+          <li><i class="fas fa-phone"></i> (267) 123-4567</li>
+          <li><i class="fas fa-envelope"></i> info@brightsmile.com</li>
+          <li><i class="fas fa-clock"></i> Mon-Fri: 8am-7pm, Sat: 9am-3pm</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2023 BrightSmile Dental Clinic. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
