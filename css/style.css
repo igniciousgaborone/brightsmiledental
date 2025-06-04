@@ -99,7 +99,7 @@ footer {
 
 footer.bg-light {
   background-color: var(--dark-text) !important;
-  color: var(--white) !important;
+  color: var(--black) !important;
 }
 
 .footer-bottom {
