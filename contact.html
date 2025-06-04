@@ -211,7 +211,7 @@
 
       // Email regex basic validation
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      // Phone regex a simple pattern for digits, spaces, plus, hyphen and parentheses
+      // Phone regex pattern for digits, spaces, plus, hyphen, parentheses
       const phonePattern = /^[\d\s+\-()]{7,15}$/;
 
       // Validate Name
@@ -246,10 +246,10 @@
         return;
       }
 
-      // All validations passed
       alert('Thank you for your appointment request! We will get back to you soon.');
+      event.preventDefault(); // Prevent form submission to avoid 405 error
+      this.reset();           // Optionally reset the form fields
     });
   </script>
 </body>
 </html>
-
