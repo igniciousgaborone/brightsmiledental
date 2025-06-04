@@ -854,6 +854,23 @@ footer {
   to { opacity: 0; }
 }
 
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+  transition: opacity 0.5s;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+
 /* Responsive Table */
 @media (max-width: 992px) {
   .products-section .container {
