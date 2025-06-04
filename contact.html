@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us | BrightSmile Dental Clinic</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    /* Input validation error highlight */
+    form input:invalid,
+    form select:invalid,
+    form textarea:invalid {
+      border: 2px solid #e74c3c; /* Red border */
+      background-color: #fdecea; /* Light red background */
+    }
+    
+    /* Notification style */
+    .notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #27ae60; /* Green */
+      color: white;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      z-index: 1000;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+    
+    .notification.fade-out {
+      opacity: 0;
+    }
+    
+    /* Optional: Style the alert message if you prefer to make your own alert box */
+    .custom-alert {
+      background-color: #e74c3c;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 4px;
+      margin-bottom: 1em;
+      font-weight: 500;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
  <header>
@@ -49,9 +89,9 @@
           <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> 123 Dental Avenue, Gaborone</p>
           <p><i class="fas fa-phone"></i> <strong>Phone:</strong> (267) 123-4567</p>
           <p><i class="fas fa-envelope"></i> <strong>Email:</strong> info@brightsmile.com</p>
-          <p><i class="fas fa-clock"></i> <strong>Hours:</strong><br>
-            Monday-Friday: 8am-7pm<br>
-            Saturday: 9am-3pm<br>
+          <p><i class="fas fa-clock"></i> <strong>Hours:</strong><br />
+            Monday-Friday: 8am-7pm<br />
+            Saturday: 9am-3pm<br />
             Sunday: Closed
           </p>
         </address>
@@ -62,24 +102,24 @@
 
       <article class="contact-form" id="appointment">
         <h2>Book an Appointment</h2>
-        <form action="#" method="POST">
+        <form action="#" method="POST" novalidate>
           <div class="form-group">
             <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required />
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required />
           </div>
           <div class="form-group">
             <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" required>
+            <input type="tel" id="phone" name="phone" required />
           </div>
           <div class="form-group">
             <label for="service">Service Needed</label>
-            <select id="service" name="service">
+            <select id="service" name="service" required>
               <option value="">Select a service</option>
-              <option value="cleaning">Cleaning & Exam</option>
+              <option value="cleaning">Cleaning &amp; Exam</option>
               <option value="whitening">Teeth Whitening</option>
               <option value="filling">Filling</option>
               <option value="crown">Crown/Bridge</option>
@@ -89,7 +129,7 @@
           </div>
           <div class="form-group">
             <label for="date">Preferred Date</label>
-            <input type="date" id="date" name="date">
+            <input type="date" id="date" name="date" />
           </div>
           <div class="form-group">
             <label for="message">Message</label>
@@ -160,55 +200,56 @@
     </div>
   </footer>
 
-       <script>
-       document.querySelector('form[action="#"]').addEventListener('submit', function(event) {
-  // Get form field values trimmed
-  const name = this.name.value.trim();
-  const email = this.email.value.trim();
-  const phone = this.phone.value.trim();
-  const service = this.service.value;
+  <script src="js/main.js"></script>
+  <script>
+    document.querySelector('form[action="#"]').addEventListener('submit', function(event) {
+      // Get form field values trimmed
+      const name = this.name.value.trim();
+      const email = this.email.value.trim();
+      const phone = this.phone.value.trim();
+      const service = this.service.value;
 
-  // Email regex basic validation
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  // Phone regex a simple pattern for digits, spaces, plus, hyphen
-  const phonePattern = /^[\d\s+\-()]{7,15}$/;
+      // Email regex basic validation
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      // Phone regex a simple pattern for digits, spaces, plus, hyphen and parentheses
+      const phonePattern = /^[\d\s+\-()]{7,15}$/;
 
-  // Validate Name
-  if (!name) {
-    alert('Please enter your full name.');
-    this.name.focus();
-    event.preventDefault();
-    return;
-  }
+      // Validate Name
+      if (!name) {
+        alert('Please enter your full name.');
+        this.name.focus();
+        event.preventDefault();
+        return;
+      }
 
-  // Validate Email
-  if (!email || !emailPattern.test(email)) {
-    alert('Please enter a valid email address.');
-    this.email.focus();
-    event.preventDefault();
-    return;
-  }
+      // Validate Email
+      if (!email || !emailPattern.test(email)) {
+        alert('Please enter a valid email address.');
+        this.email.focus();
+        event.preventDefault();
+        return;
+      }
 
-  // Validate Phone
-  if (!phone || !phonePattern.test(phone)) {
-    alert('Please enter a valid phone number.');
-    this.phone.focus();
-    event.preventDefault();
-    return;
-  }
+      // Validate Phone
+      if (!phone || !phonePattern.test(phone)) {
+        alert('Please enter a valid phone number.');
+        this.phone.focus();
+        event.preventDefault();
+        return;
+      }
 
-  // Validate Service selection
-  if (!service) {
-    alert('Please select a service needed.');
-    this.service.focus();
-    event.preventDefault();
-    return;
-  }
+      // Validate Service selection
+      if (!service) {
+        alert('Please select a service needed.');
+        this.service.focus();
+        event.preventDefault();
+        return;
+      }
 
-  // All validations passed
-  alert('Thank you for your appointment request! We will get back to you soon.');
-});
-     </script>
-     
+      // All validations passed
+      alert('Thank you for your appointment request! We will get back to you soon.');
+    });
+  </script>
 </body>
 </html>
+
