@@ -39,7 +39,7 @@ window.addEventListener('scroll', () => {
 });
 
 // Add to cart functionality
-document.querySelectorAll('.add-to-cart').forEach(button => {
+document.querySelectorAll('.btn-success').forEach(button => {
   button.addEventListener('click', function() {
     const product = this.closest('tr').querySelector('.product-info span').textContent;
     const price = this.closest('tr').querySelector('td:nth-child(3)').textContent;
@@ -59,5 +59,8 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
       notification.classList.add('fade-out');
       setTimeout(() => notification.remove(), 300);
     }, 3000);
+  });
+});
+
   });
 });
