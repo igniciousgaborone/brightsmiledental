@@ -61,6 +61,3 @@ document.querySelectorAll('.btn-success').forEach(button => {
     }, 3000);
   });
 });
-
-  });
-});
