@@ -522,7 +522,7 @@ nav a.active::after {
   align-items: center !important;
   gap: 10px !important;
   margin-bottom: 1rem !important;
-  color: black !important;
+  color: var(--accent) !important;
 }
 
 .contact-info i {
