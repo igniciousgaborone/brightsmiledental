@@ -422,7 +422,7 @@ nav a.active::after {
 
 /* ===== FOOTER ===== */
 footer {
-  background-color: var(--dark-text);
+  background-color: var(--dark-text) !important;
   color: var(--white);
   padding-top: 4rem;
 }
