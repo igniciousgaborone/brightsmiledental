@@ -1,3 +1,115 @@
+/* ===== BOOTSTRAP OVERRIDES - ADD THESE AT THE TOP OF YOUR CSS ===== */
+/* Header Overrides */
+header.navbar {
+  background-color: var(--white) !important;
+  box-shadow: var(--shadow) !important;
+  padding: 1rem 0 !important;
+}
+
+.navbar-nav {
+  display: flex !important;
+  gap: 2rem !important;
+  flex-direction: row !important;
+  padding-left: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.nav-link {
+  padding: 0.5rem 0 !important;
+  color: var(--dark-text) !important;
+}
+
+.nav-link:hover {
+  color: var(--primary) !important;
+}
+
+.nav-link.active {
+  color: var(--primary) !important;
+}
+
+.navbar-toggler {
+  padding: 0.25rem 0.5rem !important;
+  font-size: 1.5rem !important;
+}
+
+/* Footer Overrides */
+footer {
+  background-color: var(--dark-text) !important;
+  color: var(--white) !important;
+}
+
+.footer-bottom {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.list-unstyled {
+  padding-left: 0 !important;
+  list-style: none !important;
+}
+
+/* Button Overrides */
+.btn {
+  border-radius: 50px !important;
+  padding: 12px 30px !important;
+  font-weight: 600 !important;
+  transition: var(--transition) !important;
+}
+
+.btn-primary {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark) !important;
+  border-color: var(--primary-dark) !important;
+}
+
+/* Container Overrides */
+.container {
+  width: 90% !important;
+  max-width: 1200px !important;
+  padding: 0 15px !important;
+}
+
+/* ===== ENHANCED FOOTER STYLES ===== */
+.footer-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+}
+
+.footer-col h3 {
+  color: var(--white) !important;
+}
+
+.footer-col a {
+  color: var(--white) !important;
+}
+
+.contact-info li {
+  color: var(--white) !important;
+}
+
+.social-links a {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ===== RESPONSIVE OVERRIDES ===== */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column !important;
+    background-color: var(--white) !important;
+    padding: 2rem !important;
+  }
+  
+  .navbar-collapse {
+    position: fixed !important;
+    top: 80px !important;
+    left: 0 !important;
+    width: 100% !important;
+  }
+}
+
 /* ===== GLOBAL STYLES ===== */
 :root {
   --primary: #2a7fba;
@@ -27,123 +139,27 @@ body {
   overflow-x: hidden;
 }
 
-/* ===== BOOTSTRAP OVERRIDES ===== */
-/* Header Overrides */
-header.navbar {
-  background-color: var(--white) !important;
-  box-shadow: var(--shadow) !important;
-  padding: 1rem 0 !important;
-  position: sticky !important;
-  top: 0 !important;
-  z-index: 1000 !important;
-}
-
-.navbar-brand {
-  padding: 0 !important;
-  margin-right: 0 !important;
-}
-
-.navbar-nav {
-  display: flex !important;
-  gap: 2rem !important;
-  align-items: center !important;
-  flex-direction: row !important;
-  padding-left: 0 !important;
-  margin-bottom: 0 !important;
-  list-style: none !important;
-}
-
-.nav-link {
-  padding: 0.5rem 0 !important;
-  position: relative !important;
-  font-weight: 500 !important;
-  color: var(--dark-text) !important;
-}
-
-.nav-link:hover {
-  color: var(--primary) !important;
-}
-
-.nav-link.active {
-  color: var(--primary) !important;
-  font-weight: 600 !important;
-}
-
-.nav-link.active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background-color: var(--primary);
-}
-
-.navbar-toggler {
-  border: none !important;
-  font-size: 1.5rem !important;
-  color: var(--primary) !important;
-  padding: 0.25rem 0.5rem !important;
-}
-
-.navbar-collapse {
-  flex-grow: 0 !important;
-}
-
-/* Footer Overrides */
-footer {
-  background-color: var(--dark-text) !important;
-  color: var(--white) !important;
-  padding-top: 4rem !important;
-}
-
-footer.bg-light {
-  background-color: var(--dark-text) !important;
-  color: var(--black) !important;
-}
-
-.footer-bottom {
-  background-color: rgba(0, 0, 0, 0.2) !important;
-  padding: 1.5rem 0 !important;
-  text-align: center !important;
-}
-
-.footer-bottom.bg-dark {
-  background-color: rgba(0, 0, 0, 0.2) !important;
-}
-
-.list-unstyled {
-  list-style: none !important;
-  padding-left: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-/* Button Overrides */
-.btn {
-  transition: var(--transition) !important;
-}
-
-.btn-primary {
-  background-color: var(--primary) !important;
-  border-color: var(--primary) !important;
-  color: var(--white) !important;
-}
-
-.btn-primary:hover {
-  background-color: var(--primary-dark) !important;
-  border-color: var(--primary-dark) !important;
-}
-
-.btn-success {
-  background-color: #28a745 !important;
-}
-
-/* Container Overrides */
 .container {
-  width: 90% !important;
-  max-width: 1200px !important;
-  margin: 0 auto !important;
-  padding: 0 15px !important;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+ul {
+  list-style: none;
 }
 
 /* ===== BUTTONS ===== */
@@ -492,69 +508,7 @@ nav a.active::after {
   margin-right: auto;
 }
 
-.footer-grid {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
-  gap: 2rem !important;
-  margin-bottom: 2rem !important;
-}
-
-.footer-col h3 {
-  font-size: 1.3rem !important;
-  margin-bottom: 1.5rem !important;
-  color: var(--white) !important;
-}
-
-.footer-col ul li {
-  margin-bottom: 0.8rem !important;
-}
-
-.footer-col ul li a {
-  color: var(--white) !important;
-}
-
-.footer-col ul li a:hover {
-  color: var(--accent) !important;
-}
-
-.contact-info li {
-  display: flex !important;
-  align-items: center !important;
-  gap: 10px !important;
-  margin-bottom: 1rem !important;
-  color: var(--accent) !important;
-}
-
-.contact-info i {
-  color: var(--accent) !important;
-  width: 20px !important;
-  text-align: center !important;
-}
-
-.social-links {
-  display: flex !important;
-  gap: 1rem !important;
-  margin-top: 1.5rem !important;
-}
-
-.social-links a {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 40px !important;
-  height: 40px !important;
-  border-radius: 50% !important;
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  transition: var(--transition) !important;
-  color: var(--white) !important;
-}
-
-.social-links a:hover {
-  background-color: var(--accent) !important;
-  transform: translateY(-3px) !important;
-  color: var(--white) !important;
-}
-
+/* ===== FOOTER ===== */
 footer {
   background-color: var(--dark-text);
   color: var(--white);
@@ -1383,5 +1337,3 @@ footer {
     display: block;
   }
 }
-
-
